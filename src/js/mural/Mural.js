@@ -26,7 +26,7 @@ const Mural = (function(_render, Filtro){
                                     // console.log('cache aberto. gravando foto... ' + url);
                                     cache.put(url, foto)
                                     .then(
-                                        () => console.log('foto gravada no cache com sucesso!'),
+                                        () => {},
                                         err => console.error('Não foi possivel gravar a foto no cache ' + url)
                                     )
                                 },

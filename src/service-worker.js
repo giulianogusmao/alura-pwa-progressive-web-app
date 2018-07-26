@@ -1,4 +1,4 @@
-const version = 2;
+const version = 3;
 
 self.addEventListener('install', function (event) {
     console.log('service worker instaled');
@@ -53,7 +53,7 @@ self.addEventListener('activate', function (event) {
                         // removendo caches antigos
                         for (var i = version - 1; i >= 0; i--) {
                             let oldCache = 'ceep-arquivos' + (i > 0 ? `-${i}` : '');
-                            console.log('remove ' + oldCache);
+                            // console.log('remove ' + oldCache);
                             caches.delete(oldCache);
                         }
                     });
@@ -72,9 +72,9 @@ self.addEventListener('fetch', function (event) {
         let promiseResposta = caches
             .match(pedido)
             .then(res => {
-                if (!res) {
-                    console.log('internet: ' + pedido.url);
-                }
+                // if (!res) {
+                //     console.log('internet: ' + pedido.url);
+                // }
                 return res ? res : fetch(pedido);
             });
 

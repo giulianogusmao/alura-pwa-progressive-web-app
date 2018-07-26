@@ -1,0 +1,41 @@
+{
+  "name": "pastel-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.11.2"
+  },
+  "scripts": {
+    "start": "gulp",
+    "gulp": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Giuliano Gusmão",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  }
+}

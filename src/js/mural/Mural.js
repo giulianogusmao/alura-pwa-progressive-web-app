@@ -9,21 +9,21 @@ const Mural = (function(_render, Filtro){
     Filtro.on("filtrado", render)
 
     function preparaCartao(cartao){
-        console.log('preparaCartao');
+        // console.log('preparaCartao');
         const urlsImagens = Cartao.pegaImagens(cartao);
-        console.log(urlsImagens);
+        // console.log(urlsImagens);
 
         urlsImagens.forEach(url => {
-            console.log('carregando imagem... ' + url);
+            // console.log('carregando imagem... ' + url);
 
             fetch(url)
                 .then(
                     foto => {
-                        console.log('foto carregada. Abrindo cache para gravar url... ' + url);
+                        // console.log('foto carregada. Abrindo cache para gravar url... ' + url);
                         caches.open('ceep-images')
                         .then(
                             (cache) => {
-                                    console.log('cache aberto. gravando foto... ' + url);
+                                    // console.log('cache aberto. gravando foto... ' + url);
                                     cache.put(url, foto)
                                     .then(
                                         () => console.log('foto gravada no cache com sucesso!'),
@@ -78,10 +78,11 @@ const Mural = (function(_render, Filtro){
 
     function adiciona(cartao){
         if(logado){
+            // console.log('adiciona');
             cartoes.push(cartao)
             salvaCartoes()
             cartao.on("mudanca.**", render)
-            preparaCartao(cartao)
+            preparaCartao(cartao);
             render()
             return true
         } else {
